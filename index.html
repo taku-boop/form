@@ -632,10 +632,13 @@ document.addEventListener('click', function(e) {
         colorChips.innerHTML = '<span class="chip">乳白色</span><span class="chip">黒色</span>';
       } else if (chip.id === 'abs-toku-heat') {
         colorSection.classList.remove('hidden-element');
-        colorChips.innerHTML = '<span class="chip">黄土色</span>';
-      } else if (chip.id === 'abs-toku-antistatic' || chip.id === 'abs-toku-flame') {
+        colorChips.innerHTML = '<span class="chip">黄土色</span><span class="chip">黒色</span>';
+      } else if (chip.id === 'abs-toku-antistatic') {
         colorSection.classList.remove('hidden-element');
         colorChips.innerHTML = '<span class="chip">黒色</span>';
+      } else if (chip.id === 'abs-toku-flame') {
+        colorSection.classList.remove('hidden-element');
+        colorChips.innerHTML = '<span class="chip">乳白色</span><span class="chip">黒色</span>';
       } else if (chip.id === 'abs-toku-plat') {
         colorSection.classList.add('hidden-element'); 
       }
@@ -832,7 +835,12 @@ function collectData() {
     ['依頼範囲の詳細', getSelOptDetail('sc')],
     ['今回の目的', getChipsVal('purpose') + (po && po.value ? ' / ' + po.value : '')],
     ['使用用途', getChkList()],
-    ['材質選定相談', document.getElementById('consult-btn').classList.contains('on') ? '希望' : ''],
+    ['材質選定相談', (function(){
+      var on = document.getElementById('consult-btn').classList.contains('on');
+      if(!on) return '';
+      var hard = getChipsVal('hardness');
+      return '希望' + (hard ? ' / ' + hard : ' / 硬さ未選択');
+    })()],
     ['樹脂の硬さ（相談）', getChipsVal('hardness')],
     ['想定材質', document.getElementById('mat-textarea').value],
     ['工法（光造形）', getHikari()],
