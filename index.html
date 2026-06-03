@@ -151,11 +151,17 @@ textarea{min-height:90px;resize:vertical;}
 .fitem .frm{flex-shrink:0;cursor:pointer;color:var(--muted);font-size:16px;line-height:1;}
 .fitem .frm:hover{color:#ef4444;}
 hr{border:none;border-top:1px solid var(--bd);margin:16px 0;}
-.consult-banner{background:linear-gradient(135deg,#eff6ff,#dbeafe);border:1px solid #93c5fd;border-radius:var(--rlg);padding:14px 18px;display:flex;align-items:center;gap:12px;cursor:pointer;margin-bottom:12px;user-select:none;}
-.consult-banner.on{border-color:var(--blue);}
+.consult-banner{background:#fff;border:1px solid var(--bd);border-radius:var(--rlg);padding:14px 18px;display:flex;align-items:center;gap:12px;cursor:pointer;margin-bottom:12px;user-select:none;transition:border-color .15s,background .15s;outline:none;-webkit-tap-highlight-color:transparent;}
+.consult-banner:focus{outline:none !important;box-shadow:none !important;}
+.consult-banner:focus-visible{outline:none !important;box-shadow:none !important;}
+.consult-banner:active{outline:none !important;box-shadow:none !important;}
+.consult-banner:hover{border-color:var(--bbd);background:#f8fafc;}
+.consult-banner.on{border-color:var(--blue);background:var(--bdim);}
 .consult-ico{font-size:24px;flex-shrink:0;}
-.consult-title{font-size:13px;font-weight:700;color:#1e40af;}
-.consult-desc{font-size:11px;color:#3b82f6;margin-top:1px;}
+.consult-title{font-size:13px;font-weight:700;color:var(--text);}
+.consult-banner.on .consult-title{color:#1e40af;}
+.consult-desc{font-size:11px;color:var(--muted);margin-top:1px;}
+.consult-banner.on .consult-desc{color:#3b82f6;}
 .consult-check{width:20px;height:20px;border-radius:50%;border:2px solid #93c5fd;display:flex;align-items:center;justify-content:center;margin-left:auto;flex-shrink:0;font-size:11px;color:#fff;}
 .consult-banner.on .consult-check{background:var(--blue);border-color:var(--blue);}
 .submit-area{text-align:center;margin-top:32px;}
@@ -248,28 +254,7 @@ hr{border:none;border-top:1px solid var(--bd);margin:16px 0;}
 </div>
 
 <div class="block">
-  <div class="block-hd"><div class="block-num">4</div><div><div class="block-title">想定されている材質</div><div class="block-sub">未定の場合はご要望をご記入ください</div></div></div>
-  <div class="block-body">
-    <div class="consult-banner" id="consult-btn">
-      <div class="consult-ico">🔰</div>
-      <div><div class="consult-title">材質選定から相談したい（初めての方）</div><div class="consult-desc">用途・コスト・強度などからご提案します</div></div>
-    </div>
-    <div id="consult-hardness" style="display:none;margin-bottom:14px;padding:14px 16px;background:#eff6ff;border:1px solid #93c5fd;border-radius:var(--rlg);">
-      <div class="lbl" style="margin-bottom:8px;">樹脂の硬さ</div>
-      <div class="chips" data-radio="hardness">
-        <span class="chip" id="consult-hard-rigid">硬質（プラスチック系）</span>
-        <span class="chip" id="consult-hard-soft">軟質（ゴム・エラストマー系）</span>
-      </div>
-    </div>
-    <div class="f" style="margin-bottom:0;">
-      <label class="lbl" id="mat-input-label">材質・ご要望（自由記入）</label>
-      <textarea id="mat-textarea" placeholder="例：ABSライク・透明・耐熱グレードを希望&#10;例：アルミまたはステンレス&#10;例：未定 → 強度重視・コスト優先で提案希望"></textarea>
-    </div>
-  </div>
-</div>
-
-<div class="block">
-  <div class="block-hd"><div class="block-num">5</div><div><div class="block-title">想定されている工法</div><div class="block-sub">複数選択可・仕上げをお選びください</div></div></div>
+  <div class="block-hd"><div class="block-num">4</div><div><div class="block-title">想定されている工法</div><div class="block-sub">複数選択可・仕上げをお選びください</div></div></div>
   <div class="block-body">
     <div class="chks">
 
@@ -409,6 +394,27 @@ hr{border:none;border-top:1px solid var(--bd);margin:16px 0;}
         </div>
       </div>
 
+    </div>
+  </div>
+</div>
+
+<div class="block">
+  <div class="block-hd"><div class="block-num">5</div><div><div class="block-title">想定されている材質</div><div class="block-sub">未定の場合はご要望をご記入ください</div></div></div>
+  <div class="block-body">
+    <div class="consult-banner" id="consult-btn" tabindex="-1">
+      <div class="consult-ico">🔰</div>
+      <div><div class="consult-title">材質選定から相談したい（初めての方）</div><div class="consult-desc">用途・コスト・強度などからご提案します</div></div>
+    </div>
+    <div id="consult-hardness" style="display:none;margin-bottom:14px;padding:14px 16px;background:#eff6ff;border:1px solid #93c5fd;border-radius:var(--rlg);">
+      <div class="lbl" style="margin-bottom:8px;">樹脂の硬さ</div>
+      <div class="chips" data-radio="hardness">
+        <span class="chip" id="consult-hard-rigid">硬質（プラスチック系）</span>
+        <span class="chip" id="consult-hard-soft">軟質（ゴム・エラストマー系）</span>
+      </div>
+    </div>
+    <div class="f" style="margin-bottom:0;">
+      <label class="lbl" id="mat-input-label">材質・ご要望（自由記入）</label>
+      <textarea id="mat-textarea" placeholder="例：ABSライク・透明・耐熱グレードを希望&#10;例：アルミまたはステンレス&#10;例：未定 → 強度重視・コスト優先で提案希望"></textarea>
     </div>
   </div>
 </div>
