@@ -216,18 +216,18 @@ hr{border:none;border-top:1px solid var(--bd);margin:16px 0;}
           <div class="opt-body"><div class="ct">現在お持ちの資料</div><div class="chips"><span class="chip">２D図面</span><span class="chip">スケッチ・ラフ</span><span class="chip">現物</span><span class="chip">口頭・イメージのみ</span></div></div>
         </div>
         <div class="opt" data-val="make">
-          <div class="opt-h"><div class="opt-radio"><div class="dot"></div></div><div class="opt-ic">🔧</div><div><div class="opt-nm">製作のみのご対応</div><div class="opt-hint">3Dデータをご支給いただき製作します</div></div></div>
+          <div class="opt-h"><div class="opt-radio"><div class="dot"></div></div><div class="opt-ic">🔧</div><div><div class="opt-nm">製作からのご対応</div><div class="opt-hint">3Dデータをご支給いただき製作します</div></div></div>
         </div>
         <div class="opt" data-val="other">
           <div class="opt-h"><div class="opt-radio"><div class="dot"></div></div><div class="opt-ic">💬</div><div><div class="opt-nm">その他</div></div></div>
-          <div class="opt-body"><input type="text" id="inp-sc-other" placeholder="ご記入ください"></div>
+          <div class="opt-body"><input type="text" id="inp-sc-other" placeholder="例）CG動画作成、スキャニング対応"></div>
         </div>
       </div>
     </div>
     <hr>
     <div class="f" style="margin-bottom:0;">
       <label class="lbl">今回の目的（複数選択可）</label>
-      <div class="chips" data-multi="purpose"><span class="chip">形状確認</span><span class="chip">機能検証</span><span class="chip">展示会用</span><span class="chip">量産検討</span><span class="chip">社内稟議用</span></div>
+      <div class="chips" data-multi="purpose"><span class="chip">形状確認</span><span class="chip">機能検証</span><span class="chip">展示会用</span><span class="chip">量産検討</span><span class="chip">社内稟議用</span><span class="chip">市場投入品</span></div>
       <input type="text" id="inp-purpose-other" placeholder="その他（ご記入ください）" style="margin-top:8px;">
     </div>
   </div>
@@ -239,19 +239,19 @@ hr{border:none;border-top:1px solid var(--bd);margin:16px 0;}
     <div class="chks">
       <div class="chk" id="y-ishi">
         <div class="chk-h" data-tog="y-ishi"><div class="chk-box">✓</div><div class="chk-nm">意匠・デザイン確認</div><div class="chk-tag">外観評価</div></div>
-        <div class="chk-body"><div class="ct">要求外観レベル</div><div class="chips" data-multi="y-ishi"><span class="chip">展示会品質</span><span class="chip">写真撮影用</span><span class="chip">社内審査</span><span class="chip">ユーザー評価用</span></div></div>
+        <div class="chk-body"><div class="ct">要求外観レベル</div><div class="chips" data-multi="y-ishi"><span class="chip">展示会品質</span><span class="chip">写真撮影用</span><span class="chip">社内審査</span><span class="chip">ユーザー評価用</span></div><div class="chips" style="margin-top:8px;"><span class="chip" data-other-tog="y-ishi-other-wrap">その他</span></div><div id="y-ishi-other-wrap" style="display:none;margin-top:8px;"><input type="text" id="y-ishi-other-txt" placeholder="その他（ご記入ください）"></div></div>
       </div>
       <div class="chk" id="y-kino">
         <div class="chk-h" data-tog="y-kino"><div class="chk-box">✓</div><div class="chk-nm">機能・組付確認</div><div class="chk-tag">機能評価</div></div>
-        <div class="chk-body"><div class="ct">確認したい機能</div><div class="chips" data-multi="y-kino"><span class="chip">筐体嵌合</span><span class="chip">基板・部品干渉確認</span><span class="chip">可動部動作確認</span></div></div>
+        <div class="chk-body"><div class="ct">確認したい機能</div><div class="chips" data-multi="y-kino"><span class="chip">筐体嵌合</span><span class="chip">基板・部品干渉確認</span><span class="chip">可動部動作確認</span></div><div class="chips" style="margin-top:8px;"><span class="chip" data-other-tog="y-kino-other-wrap">その他</span></div><div id="y-kino-other-wrap" style="display:none;margin-top:8px;"><input type="text" id="y-kino-other-txt" placeholder="その他（ご記入ください）"></div></div>
       </div>
       <div class="chk" id="y-trial">
         <div class="chk-h" data-tog="y-trial"><div class="chk-box">✓</div><div class="chk-nm">実環境での評価・試験</div><div class="chk-tag">耐久・環境試験</div></div>
-        <div class="chk-body"><div class="ct">試験内容</div><div class="chips" data-multi="y-trial"><span class="chip">落下・衝撃</span><span class="chip">耐熱</span><span class="chip">防水・防滴</span><span class="chip">薬品接触・耐候性</span></div></div>
+        <div class="chk-body"><div class="ct">試験内容</div><div class="chips" data-multi="y-trial"><span class="chip">落下・衝撃</span><span class="chip">耐熱</span><span class="chip">防水・防滴</span><span class="chip">薬品接触・耐候性</span></div><div class="chips" style="margin-top:8px;"><span class="chip" data-other-tog="y-trial-other-wrap">その他</span></div><div id="y-trial-other-wrap" style="display:none;margin-top:8px;"><input type="text" id="y-trial-other-txt" placeholder="その他（ご記入ください）"></div></div>
       </div>
       <div class="chk" id="y-market">
         <div class="chk-h" data-tog="y-market"><div class="chk-box">✓</div><div class="chk-nm">市場調査・販路開拓用</div><div class="chk-tag">営業・販促</div></div>
-        <div class="chk-body"><div class="ct">用途詳細</div><div class="chips" data-multi="y-market"><span class="chip">新規販売先への提案サンプル</span><span class="chip">代理店・バイヤーへのデモ</span><span class="chip">展示会での市場反応確認</span></div></div>
+        <div class="chk-body"><div class="ct">用途詳細</div><div class="chips" data-multi="y-market"><span class="chip">新規販売先への提案サンプル</span><span class="chip">代理店・バイヤーへのデモ</span><span class="chip">展示会での市場反応確認</span></div><div class="chips" style="margin-top:8px;"><span class="chip" data-other-tog="y-market-other-wrap">その他</span></div><div id="y-market-other-wrap" style="display:none;margin-top:8px;"><input type="text" id="y-market-other-txt" placeholder="その他（ご記入ください）"></div></div>
       </div>
     </div>
   </div>
@@ -269,21 +269,21 @@ hr{border:none;border-top:1px solid var(--bd);margin:16px 0;}
           <div class="inner-opts" data-group="hi">
             <div class="inner-opt" data-val="none">
               <div class="inner-h"><div class="inner-radio"><div class="inner-dot"></div></div><div class="inner-nm">指定なし</div></div>
-              <div class="inner-body"><div class="ct" style="margin-top:4px;">仕上げ</div><div class="chips" data-multi="hi-none"><span class="chip">サポート除去のみ</span><span class="chip">積層痕除去</span><span class="chip">塗装</span></div></div>
+              <div class="inner-body"><div class="ct" style="margin-top:4px;">仕上げ</div><div class="chips" data-radio="hi-none"><span class="chip">サポート除去のみ</span><span class="chip">積層除去</span><span class="chip">塗装</span></div></div>
             </div>
             <div class="inner-opt" data-val="milk">
               <div class="inner-h"><div class="inner-radio"><div class="inner-dot"></div></div><div class="inner-nm">乳白色</div></div>
-              <div class="inner-body"><div class="ct" style="margin-top:4px;">仕上げ</div><div class="chips" data-multi="hi-milk"><span class="chip">サポート除去のみ</span><span class="chip">積層痕除去</span><span class="chip">塗装</span></div></div>
+              <div class="inner-body"><div class="ct" style="margin-top:4px;">仕上げ</div><div class="chips" data-radio="hi-milk"><span class="chip">サポート除去のみ</span><span class="chip">積層除去</span><span class="chip">塗装</span></div></div>
             </div>
             <div class="inner-opt" data-val="yel">
               <div class="inner-h"><div class="inner-radio"><div class="inner-dot"></div></div><div class="inner-nm">黄淡色</div></div>
-              <div class="inner-body"><div class="ct" style="margin-top:4px;">仕上げ</div><div class="chips" data-multi="hi-yel"><span class="chip">サポート除去のみ</span><span class="chip">積層痕除去</span><span class="chip">塗装</span></div></div>
+              <div class="inner-body"><div class="ct" style="margin-top:4px;">仕上げ</div><div class="chips" data-radio="hi-yel"><span class="chip">サポート除去のみ</span><span class="chip">積層除去</span><span class="chip">塗装</span></div></div>
             </div>
             <div class="inner-opt" data-val="clear">
               <div class="inner-h"><div class="inner-radio"><div class="inner-dot"></div></div><div class="inner-nm">透明</div></div>
               <div class="inner-body">
                 <div class="ct" style="margin-top:4px;">仕上げ</div>
-                <div class="chips" data-multi="hi-clear">
+                <div class="chips" data-radio="hi-clear">
                   <span class="chip">サポート除去</span>
                   <span class="chip">サポート除去＋クリア塗装</span>
                   <span class="chip">片面積層除去＋クリア塗装</span>
@@ -318,12 +318,12 @@ hr{border:none;border-top:1px solid var(--bd);margin:16px 0;}
                 
                 <div id="abs-color-section" class="hidden-element">
                   <div class="ct">基本樹脂カラー</div>
-                  <div class="chips" data-multi="abs-color" id="abs-color-chips">
+                  <div class="chips" data-radio="abs-color" id="abs-color-chips">
                     </div>
                 </div>
                 
                 <div class="ct">仕上げ</div>
-                <div class="chips" data-multi="abs-fin"><span class="chip">サポート除去のみ</span><span class="chip">マット</span><span class="chip">光沢</span><span class="chip">塗装</span><span class="chip">希望色</span></div>
+                <div class="chips" data-radio="abs-fin"><span class="chip">サポート除去のみ</span><span class="chip">マット</span><span class="chip">光沢</span></div>
               </div>
             </div>
             
@@ -331,9 +331,9 @@ hr{border:none;border-top:1px solid var(--bd);margin:16px 0;}
               <div class="sc-h" data-tog-sc="sc-pp"><div class="sc-box">✓</div><div class="sc-nm">PPライク</div></div>
               <div class="sc-body">
                 <div class="ct" style="margin-top:4px;">基本樹脂カラー</div>
-                <div class="chips" data-multi="pp-color"><span class="chip">乳白色</span><span class="chip">黒色</span></div>
+                <div class="chips" data-radio="pp-color"><span class="chip">乳白色</span><span class="chip">黒色</span><span class="chip">塗装</span><span class="chip">希望色</span><span class="chip">支給サンプルあわせ</span></div>
                 <div class="ct">仕上げ</div>
-                <div class="chips" data-multi="pp-fin"><span class="chip">サポート除去のみ</span><span class="chip">マット</span><span class="chip">塗装</span><span class="chip">希望色</span></div>
+                <div class="chips" data-radio="pp-fin"><span class="chip">サポート除去のみ</span><span class="chip">マット</span><span class="chip">光沢</span></div>
               </div>
             </div>
 
@@ -341,9 +341,11 @@ hr{border:none;border-top:1px solid var(--bd);margin:16px 0;}
               <div class="sc-h" data-tog-sc="sc-acr"><div class="sc-box">✓</div><div class="sc-nm">アクリルライク</div></div>
               <div class="sc-body">
                 <div class="ct" style="margin-top:4px;">特性</div>
-                <div class="chips" data-multi="acr-toku"><span class="chip">標準透明樹脂</span><span class="chip">非黄変樹脂</span></div>
+                <div class="chips" data-radio="acr-toku"><span class="chip">標準透明樹脂</span><span class="chip">非黄変樹脂</span></div>
+                <div class="ct">基本樹脂カラー</div>
+                <div class="chips" data-radio="acr-color"><span class="chip">塗装</span><span class="chip">希望色</span><span class="chip">支給サンプルあわせ</span></div>
                 <div class="ct">仕上げ</div>
-                <div class="chips" data-multi="acr-fin"><span class="chip">サポート除去のみ</span><span class="chip">マット（すりガラス）</span><span class="chip">光沢（高透明磨き）</span><span class="chip">希望色</span></div>
+                <div class="chips" data-radio="acr-fin"><span class="chip">サポート除去のみ</span><span class="chip">マット（すりガラス）</span><span class="chip">光沢（高透明磨き）</span></div>
               </div>
             </div>
 
@@ -359,7 +361,7 @@ hr{border:none;border-top:1px solid var(--bd);margin:16px 0;}
                 
                 <div class="gel-hardness-panel" id="panel-gel-hardness">
                   <div class="lbl" style="color:var(--blue); margin-bottom:6px;">ゲル硬度選択</div>
-                  <div class="chips" data-radio="ela-gel-hard" id="ela-gel-hard-container">
+                  <div class="chips" data-multi="ela-gel-hard" id="ela-gel-hard-container">
                     <span class="chip">0度</span>
                     <span class="chip">15度</span>
                   </div>
@@ -367,13 +369,13 @@ hr{border:none;border-top:1px solid var(--bd);margin:16px 0;}
 
                 <div id="ela-color-section" class="hidden-element">
                   <div class="ct">基本樹脂カラー</div>
-                  <div class="chips" data-multi="ela-color" id="ela-color-chips">
-                    <span class="chip">乳白色</span><span class="chip">黒色</span>
+                  <div class="chips" data-radio="ela-color" id="ela-color-chips">
+                    <span class="chip">乳白色</span><span class="chip">黒色</span><span class="chip">塗装</span><span class="chip">希望色</span><span class="chip">支給サンプルあわせ</span>
                   </div>
                 </div>
 
                 <div class="ct" style="margin-top:12px;">仕上げ</div>
-                <div class="chips" data-multi="ela-fin"><span class="chip">サポート除去のみ</span><span class="chip">マット</span><span class="chip">希望色</span></div>
+                <div class="chips" data-radio="ela-fin"><span class="chip">サポート除去のみ</span><span class="chip">マット</span></div>
               </div>
             </div>
           </div>
@@ -394,6 +396,8 @@ hr{border:none;border-top:1px solid var(--bd);margin:16px 0;}
             <span class="chip">板金加工</span>
             <span class="chip">金属加工</span>
             <span class="chip">シリコン注型</span>
+            <span class="chip">簡易金型成形</span>
+            <span class="chip">金型成形</span>
           </div>
         </div>
       </div>
@@ -405,9 +409,17 @@ hr{border:none;border-top:1px solid var(--bd);margin:16px 0;}
 <div class="block">
   <div class="block-hd"><div class="block-num">5</div><div><div class="block-title">想定されている材質</div><div class="block-sub">未定の場合はご要望をご記入ください</div></div></div>
   <div class="block-body">
-    <div class="consult-banner" id="consult-btn" tabindex="-1">
-      <div class="consult-ico">🔰</div>
-      <div><div class="consult-title">材質選定から相談したい（初めての方）</div><div class="consult-desc">用途・コスト・強度などからご提案します</div></div>
+    <div class="chk" id="consult-btn" style="margin-bottom:12px;">
+      <div class="chk-h" data-tog="consult-btn" data-tog-consult="1" style="cursor:pointer;">
+        <div class="chk-box">✓</div>
+        <div style="display:flex;align-items:center;gap:8px;">
+          <span style="font-size:16px;">🔰</span>
+          <div>
+            <div class="chk-nm">材質選定から相談したい（初めての方）</div>
+            <div style="font-size:11px;color:var(--muted);margin-top:1px;">用途・コスト・強度などからご提案します</div>
+          </div>
+        </div>
+      </div>
     </div>
     <div id="consult-hardness" style="display:none;margin-bottom:14px;padding:14px 16px;background:#eff6ff;border:1px solid #93c5fd;border-radius:var(--rlg);">
       <div class="lbl" style="margin-bottom:8px;">樹脂の硬さ</div>
@@ -455,7 +467,7 @@ hr{border:none;border-top:1px solid var(--bd);margin:16px 0;}
           </div>
         </div>
         <div class="opt" data-val="none">
-          <div class="opt-h"><div class="opt-radio"><div class="dot"></div></div><div class="opt-ic">💬</div><div><div class="opt-nm">なし（スケッチ・口頭・現物のみ）</div></div></div>
+          <div class="opt-h"><div class="opt-radio"><div class="dot"></div></div><div class="opt-ic">💬</div><div><div class="opt-nm">なし（口頭・現物のみ）</div></div></div>
         </div>
       </div>
     </div>
@@ -493,11 +505,11 @@ hr{border:none;border-top:1px solid var(--bd);margin:16px 0;}
     <div class="f">
       <label class="lbl">現在の開発状況</label>
       <div class="opts" data-group="dv">
-        <div class="opt" data-val="idea"><div class="opt-h"><div class="opt-radio"><div class="dot"></div></div><div class="opt-ic">💡</div><div><div class="opt-nm">構想段階</div></div></div><div class="opt-body"><div class="chips" data-multi="dv-idea"><span class="chip">アイデアレベル</span><span class="chip">外観のみ決定</span><span class="chip">内部基板サイズのみ決定</span></div></div></div>
-        <div class="opt" data-val="des"><div class="opt-h"><div class="opt-radio"><div class="dot"></div></div><div class="opt-ic">✏️</div><div><div class="opt-nm">設計中</div></div></div><div class="opt-body"><div class="chips" data-multi="dv-des"><span class="chip">初期（変更大）</span><span class="chip">最終段階（ほぼ確定）</span></div></div></div>
-        <div class="opt" data-val="proto"><div class="opt-h"><div class="opt-radio"><div class="dot"></div></div><div class="opt-ic">🔬</div><div><div class="opt-nm">試作段階</div></div></div><div class="opt-body"><div class="chips" data-multi="dv-proto"><span class="chip">1次試作（形状確認）</span><span class="chip">2〜3次試作（機能評価）</span><span class="chip">量産直前試作</span></div></div></div>
-        <div class="opt" data-val="eval"><div class="opt-h"><div class="opt-radio"><div class="dot"></div></div><div class="opt-ic">📊</div><div><div class="opt-nm">評価段階</div></div></div><div class="opt-body"><div class="chips" data-multi="dv-eval"><span class="chip">社内試験中</span><span class="chip">フィールドテスト中</span><span class="chip">認証機関申請準備中</span></div></div></div>
-        <div class="opt" data-val="mass"><div class="opt-h"><div class="opt-radio"><div class="dot"></div></div><div class="opt-ic">🏭</div><div><div class="opt-nm">量産検討中</div></div></div><div class="opt-body"><div class="chips" data-multi="dv-mass"><span class="chip">半年以内</span><span class="chip">1年以内</span><span class="chip">時期未定</span></div></div></div>
+        <div class="opt" data-val="idea"><div class="opt-h"><div class="opt-radio"><div class="dot"></div></div><div class="opt-ic">💡</div><div><div class="opt-nm">構想段階</div></div></div><div class="opt-body"><div class="chips" data-multi="dv-idea"><span class="chip">アイデアレベル</span><span class="chip">外観のみ決定</span><span class="chip">内部基板サイズのみ決定</span></div><div id="dv-idea-other-wrap" style="display:none;margin-top:8px;"><input type="text" id="dv-idea-other-txt" placeholder="その他（ご記入ください）"></div><div class="chips" style="margin-top:8px;"><span class="chip" data-other-tog="dv-idea-other-wrap">その他</span></div></div></div>
+        <div class="opt" data-val="des"><div class="opt-h"><div class="opt-radio"><div class="dot"></div></div><div class="opt-ic">✏️</div><div><div class="opt-nm">設計中</div></div></div><div class="opt-body"><div class="chips" data-multi="dv-des"><span class="chip">初期（変更大）</span><span class="chip">最終段階（ほぼ確定）</span></div><div id="dv-des-other-wrap" style="display:none;margin-top:8px;"><input type="text" id="dv-des-other-txt" placeholder="その他（ご記入ください）"></div><div class="chips" style="margin-top:8px;"><span class="chip" data-other-tog="dv-des-other-wrap">その他</span></div></div></div>
+        <div class="opt" data-val="proto"><div class="opt-h"><div class="opt-radio"><div class="dot"></div></div><div class="opt-ic">🔬</div><div><div class="opt-nm">試作段階</div></div></div><div class="opt-body"><div class="chips" data-multi="dv-proto"><span class="chip">1次試作（形状確認）</span><span class="chip">2〜3次試作（機能評価）</span><span class="chip">量産直前試作</span></div><div id="dv-proto-other-wrap" style="display:none;margin-top:8px;"><input type="text" id="dv-proto-other-txt" placeholder="その他（ご記入ください）"></div><div class="chips" style="margin-top:8px;"><span class="chip" data-other-tog="dv-proto-other-wrap">その他</span></div></div></div>
+        <div class="opt" data-val="eval"><div class="opt-h"><div class="opt-radio"><div class="dot"></div></div><div class="opt-ic">📊</div><div><div class="opt-nm">評価段階</div></div></div><div class="opt-body"><div class="chips" data-multi="dv-eval"><span class="chip">社内試験中</span><span class="chip">フィールドテスト中</span><span class="chip">認証機関申請準備中</span></div><div id="dv-eval-other-wrap" style="display:none;margin-top:8px;"><input type="text" id="dv-eval-other-txt" placeholder="その他（ご記入ください）"></div><div class="chips" style="margin-top:8px;"><span class="chip" data-other-tog="dv-eval-other-wrap">その他</span></div></div></div>
+        <div class="opt" data-val="mass"><div class="opt-h"><div class="opt-radio"><div class="dot"></div></div><div class="opt-ic">🏭</div><div><div class="opt-nm">量産検討中</div></div></div><div class="opt-body"><div class="chips" data-multi="dv-mass"><span class="chip">半年以内</span><span class="chip">1年以内</span><span class="chip">時期未定</span></div><div id="dv-mass-other-wrap" style="display:none;margin-top:8px;"><input type="text" id="dv-mass-other-txt" placeholder="その他（ご記入ください）"></div><div class="chips" style="margin-top:8px;"><span class="chip" data-other-tog="dv-mass-other-wrap">その他</span></div></div></div>
       </div>
     </div>
     <hr>
@@ -506,7 +518,7 @@ hr{border:none;border-top:1px solid var(--bd);margin:16px 0;}
       <div class="opts" data-group="bg">
         <div class="opt" data-val="fixed">
           <div class="opt-h"><div class="opt-radio"><div class="dot"></div></div><div class="opt-ic">💴</div><div><div class="opt-nm">予算上限あり</div></div></div>
-          <div class="opt-body"><div class="ct">予算の総額目安</div><div class="chips" data-radio="bg-range"><span class="chip">10万円未満</span><span class="chip">10〜30万円</span><span class="chip">30〜100万円</span><span class="chip">100万円以上</span></div></div>
+          <div class="opt-body"><div class="ct">予算の総額目安</div><div class="chips" data-radio="bg-range"><span class="chip">10万円未満</span><span class="chip">10〜30万円</span><span class="chip">30〜50万円</span><span class="chip">50〜100万円</span><span class="chip">100万円以上</span></div></div>
         </div>
       </div>
       <div style="margin-top:12px;">
@@ -572,8 +584,9 @@ document.addEventListener('click', function(e) {
     if (!card.classList.contains('opt')) return;
     var group = card.parentElement;
     if (!group || !group.dataset.group) return;
+    var wasOn = card.classList.contains('on');
     group.querySelectorAll('.opt').forEach(function(o) { o.classList.remove('on'); });
-    card.classList.add('on');
+    if (!wasOn) card.classList.add('on'); // 再クリックで解除
     return;
   }
 
@@ -582,7 +595,34 @@ document.addEventListener('click', function(e) {
   if (chkH) {
     var togId = chkH.dataset.tog;
     if (togId) {
-      document.getElementById(togId).classList.toggle('on');
+      var togEl = document.getElementById(togId);
+      togEl.classList.toggle('on');
+      var isNowOn = togEl.classList.contains('on');
+
+      // 材質相談バナー専用処理
+      if (togId === 'consult-btn') {
+        var hardPanel = document.getElementById('consult-hardness');
+        var ta = document.getElementById('mat-textarea');
+        var lbl = document.getElementById('mat-input-label');
+        if (isNowOn) {
+          // 開いたとき：硬度パネル表示・選択リセット
+          if (hardPanel) {
+            hardPanel.style.display = 'block';
+            hardPanel.querySelectorAll('.chip').forEach(function(c){ c.classList.remove('on'); });
+          }
+        } else {
+          // 閉じたとき：硬度パネル非表示・テキスト復元
+          if (hardPanel) {
+            hardPanel.style.display = 'none';
+            hardPanel.querySelectorAll('.chip').forEach(function(c){ c.classList.remove('on'); });
+          }
+          if (lbl) lbl.textContent = '材質・ご要望（自由記入）';
+          if (ta) {
+            if (ta.value === '材質選定から相談希望') ta.value = '';
+            ta.placeholder = '例：ABSライク・透明・耐熱グレードを希望 / 例：アルミまたはステンレス / 例：未定 → 強度重視・コスト優先で提案希望';
+          }
+        }
+      }
     }
     return;
   }
@@ -593,8 +633,9 @@ document.addEventListener('click', function(e) {
     var iCard = innerH.parentElement;
     if (!iCard.classList.contains('inner-opt')) return;
     var iGroup = iCard.parentElement;
+    var wasInnerOn = iCard.classList.contains('on');
     iGroup.querySelectorAll('.inner-opt').forEach(function(o) { o.classList.remove('on'); });
-    iCard.classList.add('on');
+    if (!wasInnerOn) iCard.classList.add('on');
     return;
   }
 
@@ -608,17 +649,29 @@ document.addEventListener('click', function(e) {
     return;
   }
 
+  // ── 4a. その他トグル（使用用途・開発状況） ──
+  if (target.dataset && target.dataset.otherTog) {
+    var wrap = document.getElementById(target.dataset.otherTog);
+    if (wrap) {
+      var isHidden = wrap.style.display === 'none' || wrap.style.display === '';
+      wrap.style.display = isHidden ? 'block' : 'none';
+      target.classList.toggle('on', isHidden);
+    }
+    return;
+  }
+
   // ── 5. CHIP クリック（目的や用途の四角いチップの選択・固定） ──
   var chip = target.closest('.chip');
   if (chip) {
     var chipGroup = chip.parentElement;
     
     if (chipGroup.dataset.radio) {
-      // ラジオ型
+      // ラジオ型（単一選択・再クリックで解除）
+      var wasChipOn = chip.classList.contains('on');
       chipGroup.querySelectorAll('.chip').forEach(function(c) { c.classList.remove('on'); });
-      chip.classList.add('on');
+      if (!wasChipOn) chip.classList.add('on');
     } else {
-      // チェック型（複数選択して青く固定）
+      // チェック型（複数選択・再クリックで解除）
       chip.classList.toggle('on');
     }
 
@@ -639,7 +692,7 @@ document.addEventListener('click', function(e) {
 
       if (chip.id === 'abs-toku-std') {
         colorSection.classList.remove('hidden-element');
-        colorChips.innerHTML = '<span class="chip">乳白色</span><span class="chip">黒色</span>';
+        colorChips.innerHTML = '<span class="chip">乳白色</span><span class="chip">黒色</span><span class="chip">塗装</span><span class="chip">希望色</span><span class="chip">支給サンプルあわせ</span>';
       } else if (chip.id === 'abs-toku-heat') {
         colorSection.classList.remove('hidden-element');
         colorChips.innerHTML = '<span class="chip">黄土色</span><span class="chip">黒色</span>';
@@ -648,7 +701,7 @@ document.addEventListener('click', function(e) {
         colorChips.innerHTML = '<span class="chip">黒色</span>';
       } else if (chip.id === 'abs-toku-flame') {
         colorSection.classList.remove('hidden-element');
-        colorChips.innerHTML = '<span class="chip">乳白色</span><span class="chip">黒色</span>';
+        colorChips.innerHTML = '<span class="chip">乳白色</span><span class="chip">黒色</span><span class="chip">塗装</span><span class="chip">希望色</span><span class="chip">支給サンプルあわせ</span>';
       } else if (chip.id === 'abs-toku-plat') {
         colorSection.classList.add('hidden-element'); 
       }
@@ -659,7 +712,7 @@ document.addEventListener('click', function(e) {
     var gelPanel = document.getElementById('panel-gel-hardness');
     var elaColorSection = document.getElementById('ela-color-section');
 
-    if (chipGroup.dataset.radio === 'ela-hard') {
+    if (chipGroup.dataset.radio === 'ela-hard' || chipGroup.dataset.multi === 'ela-hard') {
       if (hitohadaChip && hitohadaChip.classList.contains('on')) {
         // 「人肌ゲル」選択時は、カラー選択（乳白/黒）を完全に隠す
         if (elaColorSection) elaColorSection.classList.add('hidden-element');
@@ -669,11 +722,20 @@ document.addEventListener('click', function(e) {
           elaColorSection.querySelectorAll('.chip').forEach(function(c) { c.classList.remove('on'); });
         }
       } else {
-        // 通常のゴム硬度（20〜90度）の時はカラーを表示、ゲルパネルを隠す
-        if (elaColorSection) elaColorSection.classList.remove('hidden-element');
+        // 通常のゴム硬度（20〜90度）
         if (gelPanel) {
           gelPanel.classList.remove('show');
           gelPanel.querySelectorAll('.chip').forEach(function(c) { c.classList.remove('on'); });
+        }
+        // 何も選択されていなければカラーを隠す
+        var anyElaOn = chipGroup.querySelector('.chip.on');
+        if (anyElaOn) {
+          if (elaColorSection) elaColorSection.classList.remove('hidden-element');
+        } else {
+          if (elaColorSection) {
+            elaColorSection.classList.add('hidden-element');
+            elaColorSection.querySelectorAll('.chip').forEach(function(c){ c.classList.remove('on'); });
+          }
         }
       }
     }
@@ -711,20 +773,8 @@ document.addEventListener('click', function(e) {
     return;
   }
 
-  // ── 9. 材質相談バナー ──
-  var consult = target.closest('#consult-btn');
-  if (consult) {
-    consult.classList.toggle('on');
-    var hardPanel = document.getElementById('consult-hardness');
-    if (consult.classList.contains('on')) {
-      if (hardPanel) hardPanel.style.display = 'block';
-    } else {
-      if (hardPanel) hardPanel.style.display = 'none';
-      document.getElementById('mat-input-label').textContent = '材質・ご要望（自由記入）';
-      document.getElementById('mat-textarea').placeholder = '例：ABSライク・透明・耐熱グレードを希望\n例：アルミまたはステンレス\n例：未定 → 強度重視・コスト優先で提案希望';
-    }
-    return;
-  }
+  // ── 9. 材質相談（chk型） ──
+
 
   // ── 10. 送信処理 ──
   if (target.id === 'btn-submit') { doSubmit(); return; }
@@ -844,9 +894,22 @@ function collectData() {
     ['ご依頼範囲', getSelOpt('sc')],
     ['依頼範囲の詳細', getSelOptDetail('sc')],
     ['今回の目的', getChipsVal('purpose') + (po && po.value ? ' / ' + po.value : '')],
-    ['使用用途', getChkList()],
+    ['使用用途', (function(){
+      var r = [];
+      document.querySelectorAll('.chk.on').forEach(function(c){
+        if(!c.id || !c.id.startsWith('y-')) return;
+        var nm = c.querySelector('.chk-nm') ? c.querySelector('.chk-nm').textContent.trim() : '';
+        var chips = [];
+        c.querySelectorAll('.chip.on').forEach(function(ch){ chips.push(ch.textContent.trim()); });
+        var otherInp = c.querySelector('input[type=text]');
+        if(otherInp && otherInp.value) chips.push('その他:' + otherInp.value);
+        r.push(nm + (chips.length ? '（' + chips.join('/') + '）' : ''));
+      });
+      return r.join(' / ');
+    })()],
     ['材質選定相談', (function(){
-      var on = document.getElementById('consult-btn').classList.contains('on');
+      var chkCard = document.getElementById('consult-chk');
+      var on = chkCard && chkCard.classList.contains('on');
       if(!on) return '';
       var hard = getChipsVal('hardness');
       return '希望' + (hard ? ' / ' + hard : ' / 硬さ未選択');
@@ -861,7 +924,14 @@ function collectData() {
     ['参考画像・製品', getSelOpt('r')],
     ['参考詳細', getSelOptDetail('r') + (refUrl && refUrl.value ? ' URL:' + refUrl.value : '')],
     ['開発状況', getSelOpt('dv')],
-    ['開発状況の詳細', getSelOptDetail('dv')],
+    ['開発状況の詳細', (function(){
+      var base = getSelOptDetail('dv');
+      var activeOpt = document.querySelector('[data-group="dv"] .opt.on');
+      if(!activeOpt) return base;
+      var txt = activeOpt.querySelector('input[type=text]');
+      if(txt && txt.value) base += (base ? ' / ' : '') + 'その他:' + txt.value;
+      return base;
+    })()],
     ['予算感', getSelOpt('bg')],
     ['予算詳細', getChipsVal('bg-range')],
     ['予算備考', document.getElementById('inp-budget-note').value],
