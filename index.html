@@ -1049,17 +1049,20 @@ async function doSubmit() {
         }
       }
 
-      // FormDataでGASに送信（ファイル＋フォームデータ）
-      var fd = new FormData();
-      fd.append('data', JSON.stringify(rows));
-      fd.append('files', JSON.stringify(filesData.map(function(f) {
-        return {label: f.label, name: f.name, mimeType: f.mimeType, data: f.data};
-      })));
+      // URLSearchParamsでGASに送信（e.parameterで確実に読める）
+      var params = new URLSearchParams();
+      params.append('data', JSON.stringify(rows));
+      if (filesData.length > 0) {
+        params.append('files', JSON.stringify(filesData.map(function(f) {
+          return {label: f.label, name: f.name, mimeType: f.mimeType, data: f.data};
+        })));
+      }
 
       await fetch(cleanUrl, {
         method: 'POST',
         mode: 'no-cors',
-        body: fd
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: params.toString()
       });
       sheetOk = true;
     } catch(e) {
