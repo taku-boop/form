@@ -446,15 +446,25 @@ hr{border:none;border-top:1px solid var(--bd);margin:16px 0;}
           <div class="opt-body">
             <div class="ct" style="margin-top:0;">データ形式</div>
             <div class="chips" data-multi="d-fmt" style="margin-bottom:12px;"><span class="chip">STEP（.stp）</span><span class="chip">IGES（.igs）</span><span class="chip">Parasolid（.x_t）</span><span class="chip">STL（.stl）</span></div>
-            <label class="uzone"><input type="file" multiple accept=".step,.stp,.iges,.igs,.stl,.x_t,.x_b,.zip" data-filelist="ul-3d"><div class="u-ico">📁</div><div class="u-txt"><strong>クリックしてアップロード</strong>またはドラッグ＆ドロップ</div><div class="u-hint">STEP / IGES / STL / ZIP</div></label>
-            <div class="flist" id="ul-3d"></div>
+            <div style="margin-top:8px;">
+              <div style="margin-top:4px;">
+                <input type="file" id="file-3d" multiple accept=".step,.stp,.iges,.igs,.stl,.x_t,.x_b,.zip" style="display:none;" onchange="previewFiles('ul-3d',this)">
+                <label for="file-3d" style="display:inline-flex;align-items:center;gap:8px;padding:8px 16px;background:var(--bdim);border:1px solid var(--bbd);border-radius:20px;cursor:pointer;font-size:12px;color:var(--blue);font-weight:600;">📎 クリックしてアップロード</label>
+                <div id="ul-3d" style="margin-top:8px;display:flex;flex-direction:column;gap:4px;"></div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="opt" data-val="2d">
           <div class="opt-h"><div class="opt-radio"><div class="dot"></div></div><div class="opt-ic">📄</div><div><div class="opt-nm">２D図面あり</div><div class="opt-hint">PDF / DXF / DWG</div></div></div>
           <div class="opt-body">
-            <label class="uzone"><input type="file" multiple accept=".pdf,.dxf,.dwg,.jpg,.png,.zip" data-filelist="ul-2d"><div class="u-ico">📁</div><div class="u-txt"><strong>クリックしてアップロード</strong></div><div class="u-hint">PDF / DXF / DWG / JPG / ZIP</div></label>
-            <div class="flist" id="ul-2d"></div>
+            <div style="margin-top:8px;">
+              <div style="margin-top:4px;">
+                <input type="file" id="file-2d" multiple accept=".pdf,.dxf,.dwg,.jpg,.jpeg,.png,.zip" style="display:none;" onchange="previewFiles('ul-2d',this)">
+                <label for="file-2d" style="display:inline-flex;align-items:center;gap:8px;padding:8px 16px;background:var(--bdim);border:1px solid var(--bbd);border-radius:20px;cursor:pointer;font-size:12px;color:var(--blue);font-weight:600;">📎 クリックしてアップロード</label>
+                <div id="ul-2d" style="margin-top:8px;display:flex;flex-direction:column;gap:4px;"></div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="opt" data-val="both">
@@ -462,8 +472,13 @@ hr{border:none;border-top:1px solid var(--bd);margin:16px 0;}
           <div class="opt-body">
             <div class="ct" style="margin-top:0;">3Dデータ形式</div>
             <div class="chips" data-multi="d-both-fmt" style="margin-bottom:12px;"><span class="chip">STEP</span><span class="chip">IGES</span><span class="chip">Parasolid</span><span class="chip">STL</span></div>
-            <label class="uzone"><input type="file" multiple data-filelist="ul-both"><div class="u-ico">📁</div><div class="u-txt"><strong>まとめてアップロード</strong></div><div class="u-hint">ZIP推奨</div></label>
-            <div class="flist" id="ul-both"></div>
+            <div style="margin-top:8px;">
+              <div style="margin-top:4px;">
+                <input type="file" id="file-both" multiple  style="display:none;" onchange="previewFiles('ul-both',this)">
+                <label for="file-both" style="display:inline-flex;align-items:center;gap:8px;padding:8px 16px;background:var(--bdim);border:1px solid var(--bbd);border-radius:20px;cursor:pointer;font-size:12px;color:var(--blue);font-weight:600;">📎 クリックしてアップロード</label>
+                <div id="ul-both" style="margin-top:8px;display:flex;flex-direction:column;gap:4px;"></div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="opt" data-val="none">
@@ -484,8 +499,11 @@ hr{border:none;border-top:1px solid var(--bd);margin:16px 0;}
           <div class="ct" style="margin-top:0;">参考データの種類</div>
           <div class="chips" data-multi="ref-type" style="margin-bottom:10px;"><span class="chip">類似製品の写真</span><span class="chip">ポンチ絵・スケッチ</span><span class="chip">仕様書</span></div>
           <input type="text" id="inp-ref-url" placeholder="参考URL（あれば）" style="margin-bottom:10px;">
-          <label class="uzone"><input type="file" multiple accept=".jpg,.jpeg,.png,.pdf,.zip" data-filelist="ul-ref"><div class="u-ico">🖼️</div><div class="u-txt"><strong>参考画像・資料をアップロード</strong></div><div class="u-hint">JPG / PNG / PDF / ZIP</div></label>
-          <div class="flist" id="ul-ref"></div>
+          <div style="margin-top:4px;">
+            <input type="file" id="file-ref" multiple accept=".jpg,.jpeg,.png,.pdf,.zip" style="display:none;" onchange="previewFiles('ul-ref',this)">
+            <label for="file-ref" style="display:inline-flex;align-items:center;gap:8px;padding:8px 16px;background:var(--bdim);border:1px solid var(--bbd);border-radius:20px;cursor:pointer;font-size:12px;color:var(--blue);font-weight:600;">📎 クリックしてアップロード</label>
+            <div id="ul-ref" style="margin-top:8px;display:flex;flex-direction:column;gap:4px;"></div>
+          </div>
         </div>
       </div>
       <div class="opt" data-val="post">
@@ -569,7 +587,7 @@ hr{border:none;border-top:1px solid var(--bd);margin:16px 0;}
 })();
 </script><script>
 // 送信連携先となるGoogle Apps ScriptのURL
-var GAS_URL = 'https://script.google.com/macros/s/AKfycbySDuM1YrEUieYGrBMzvGzf0GSxPmXXEsrxmwdsMILDATh1Nfd7G6Y8HVZtR_F6N40/exec';
+var GAS_URL = 'https://script.google.com/macros/s/AKfycbwcBtBJHyuZ6GrfRwd7fVNyklXImJrNGpJYGOZd_nF2luRTcILwcMHVPz_aQA3Xtvg/exec';
 
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 //  イベント委譲 — 全クリック処理を1箇所で管理
@@ -787,11 +805,13 @@ document.addEventListener('change', function(e) {
   var listId = inp.dataset.filelist;
   if (!listId) return;
   var list = document.getElementById(listId);
+  if (!list) return;
   Array.from(inp.files).forEach(function(f) {
     var d = document.createElement('div');
     d.className = 'fitem';
     d.innerHTML = '<span class="fname">📄 ' + f.name + '</span><span class="fsize">(' + Math.round(f.size/1024) + ' KB)</span><span class="frm">×</span>';
-    d.querySelector('.frm').addEventListener('click', function() { d.remove(); });
+    var frm = d.querySelector('.frm');
+    if (frm) frm.addEventListener('click', function() { d.remove(); });
     list.appendChild(d);
   });
 });
@@ -802,7 +822,8 @@ document.querySelectorAll('.uzone').forEach(function(z) {
   z.addEventListener('drop', function(e) {
     e.preventDefault(); z.style.borderColor='';
     var inp = z.querySelector('input[type=file]');
-    if (!inp || !inp.dataset.filelist) return;
+    if (!inp) return;
+    if (!inp.dataset.filelist) return;
     var dt = new DataTransfer();
     Array.from(e.dataTransfer.files).forEach(function(f) { dt.items.add(f); });
     inp.files = dt.files;
@@ -908,7 +929,7 @@ function collectData() {
       return r.join(' / ');
     })()],
     ['材質選定相談', (function(){
-      var chkCard = document.getElementById('consult-chk');
+      var chkCard = document.getElementById('consult-btn');
       var on = chkCard && chkCard.classList.contains('on');
       if(!on) return '';
       var hard = getChipsVal('hardness');
@@ -938,48 +959,120 @@ function collectData() {
     ['希望納期', document.getElementById('inp-nouki').value],
     ['希望数量', document.getElementById('inp-suryo').value],
     ['備考', document.getElementById('inp-biko').value],
+    ['添付ファイル（3Dデータ）', getFileNamesFromInput('file-3d')],
+    ['添付ファイル（図面）', getFileNamesFromInput('file-2d')],
+    ['添付ファイル（3D＋図面）', getFileNamesFromInput('file-both')],
+    ['添付ファイル（参考画像）', getFileNamesFromInput('file-ref')],
   ];
+}
+
+function getFileNames(listId) {
+  var list = document.getElementById(listId);
+  if (!list) return '';
+  var names = [];
+  list.querySelectorAll('.fitem').forEach(function(item) {
+    var nameEl = item.querySelector('.fname');
+    if (nameEl) names.push(nameEl.textContent.trim());
+  });
+  return names.join(' / ');
+}
+
+function getFileNamesFromInput(inputId) {
+  var inp = document.getElementById(inputId);
+  if (!inp || !inp.files) return '';
+  return Array.from(inp.files).map(function(f){ return f.name; }).join(' / ');
+}
+
+// ファイルをBase64に変換
+function fileToBase64(file) {
+  return new Promise(function(resolve, reject) {
+    var reader = new FileReader();
+    reader.onload = function(e) {
+      var base64 = e.target.result.split(',')[1];
+      resolve(base64);
+    };
+    reader.onerror = reject;
+    reader.readAsDataURL(file);
+  });
+}
+
+// ファイルプレビュー表示
+function previewFiles(listId, input) {
+  var list = document.getElementById(listId);
+  list.innerHTML = '';
+  Array.from(input.files).forEach(function(f) {
+    var d = document.createElement('div');
+    d.style.cssText = 'font-size:12px;color:var(--label);padding:4px 8px;background:var(--bdim);border-radius:6px;';
+    d.textContent = '📄 ' + f.name + ' (' + Math.round(f.size/1024) + ' KB)';
+    list.appendChild(d);
+  });
 }
 
 async function doSubmit() {
   var company = document.getElementById('inp-company').value.trim();
   var person  = document.getElementById('inp-person').value.trim();
   if (!company || !person) { alert('会社名とご担当者名は必須です。'); return; }
-  
+
   var submitBtn = document.getElementById('btn-submit');
   if (submitBtn) {
-    submitBtn.textContent = '送信中…';
+    submitBtn.textContent = '送信中…（ファイルをアップロード中）';
     submitBtn.disabled = true;
     submitBtn.style.opacity = '0.6';
   }
+
   var rows = collectData();
   var sheetOk = false;
   var cleanUrl = GAS_URL.trim();
-  
+
   if (cleanUrl) {
-    try { 
-      await new Promise(function(resolve, reject) {
-        var url = cleanUrl + '?data=' + encodeURIComponent(JSON.stringify(rows));
-        var iframe = document.createElement('iframe');
-        iframe.style.cssText = 'display:none;position:absolute;width:0;height:0;border:0;';
-        document.body.appendChild(iframe);
-        setTimeout(function() {
-          if (document.body.contains(iframe)) document.body.removeChild(iframe);
-          resolve();
-        }, 500);
-        iframe.src = url;
+    try {
+      // ファイルをBase64に変換して収集
+      var fileInputs = [
+        {id: 'file-3d',   label: '3Dデータ'},
+        {id: 'file-2d',   label: '図面'},
+        {id: 'file-both', label: '3D＋図面'},
+        {id: 'file-ref',  label: '参考画像'},
+      ];
+      var filesData = [];
+      for (var fi = 0; fi < fileInputs.length; fi++) {
+        var inp = document.getElementById(fileInputs[fi].id);
+        if (!inp || !inp.files || inp.files.length === 0) continue;
+        for (var fj = 0; fj < inp.files.length; fj++) {
+          var f = inp.files[fj];
+          var b64 = await fileToBase64(f);
+          filesData.push({
+            label: fileInputs[fi].label,
+            name: f.name,
+            mimeType: f.type || 'application/octet-stream',
+            data: b64
+          });
+        }
+      }
+
+      // FormDataでGASに送信（ファイル＋フォームデータ）
+      var fd = new FormData();
+      fd.append('data', JSON.stringify(rows));
+      fd.append('files', JSON.stringify(filesData.map(function(f) {
+        return {label: f.label, name: f.name, mimeType: f.mimeType, data: f.data};
+      })));
+
+      await fetch(cleanUrl, {
+        method: 'POST',
+        mode: 'no-cors',
+        body: fd
       });
-      sheetOk = true; 
+      sheetOk = true;
     } catch(e) {
-      console.error(e);
+      console.error('送信エラー:', e);
     }
   }
+
   downloadCSV();
   document.getElementById('form').style.display = 'none';
   document.getElementById('complete').classList.add('on');
   var msg = document.getElementById('comp-msg');
   if (sheetOk) {
-    msg.innerHTML = 'スプレッドシートへの書き込みが完了しました。<br>担当者より3営業日以内にご連絡いたします。';
+    msg.innerHTML = 'スプレッドシートへの書き込みが完了しました。<br>ファイルはGoogleドライブに自動保存されました。<br>担当者より3営業日以内にご連絡いたします。';
   } else {
     msg.innerHTML = 'ネットワークエラーのためCSVのみを保存しました。';
   }
