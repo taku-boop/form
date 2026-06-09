@@ -1101,9 +1101,10 @@ async function doSubmit() {
       payload['fileboth_data'] = ATTACHMENTS['file-both'];
       payload['fileref_data'] = ATTACHMENTS['file-ref'];
 
-      var response = await fetch(cleanUrl, {
+     var response = await fetch(cleanUrl, {
         method: 'POST',
         mode: 'cors',
+        redirect: 'follow', // 🔥【超重要】Googleの転送（制限）を強制的にすり抜ける設定
         headers: {
           'Content-Type': 'text/plain'
         },
